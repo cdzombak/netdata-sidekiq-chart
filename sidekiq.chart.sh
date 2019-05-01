@@ -1,8 +1,7 @@
 # sidekiq.chart.sh by codl <codl@codl.fr>
 #
 # put this in /usr/libexec/netdata/charts.d
-# to let others know that
-# you are gay too
+# chown root:netdata and chmod +x
 
 sidekiq_update_every=5
 sidekiq_priority=9000
