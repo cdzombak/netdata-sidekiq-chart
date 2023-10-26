@@ -20,17 +20,17 @@ sidekiq_check() {
 sidekiq_create() {
     cat <<EOF
 
-CHART sidekiq.processed '' "sidekiq processed jobs" "jobs" sidekiq sidekiq stacked $((sidekiq_priority + 0)) $sidekiq_update_every
+CHART sidekiq.processed '' "sidekiq processed jobs" "jobs" sidekiq sidekiq.processed stacked $((sidekiq_priority + 0)) $sidekiq_update_every
 DIMENSION processed successful incremental 1 1
 DIMENSION failed failed incremental 1 1
 
-CHART sidekiq.busy '' 'sidekiq busy jobs' jobs sidekiq sidekiq area $((sidekiq_priority + 1)) $sidekiq_update_every
+CHART sidekiq.busy '' 'sidekiq busy jobs' jobs sidekiq sidekiq.busy area $((sidekiq_priority + 1)) $sidekiq_update_every
 DIMENSION busy busy absolute 1 1
 
-CHART sidekiq.queue '' 'sidekiq enqueued jobs' jobs sidekiq sidekiq area $((sidekiq_priority + 2)) $sidekiq_update_every
+CHART sidekiq.queue '' 'sidekiq enqueued jobs' jobs sidekiq sidekiq.queue area $((sidekiq_priority + 2)) $sidekiq_update_every
 DIMENSION enqueued enqueued absolute 1 1
 
-CHART sidekiq.retry '' 'sidekiq retry jobs' jobs sidekiq sidekiq stacked $((sidekiq_priority + 3)) $sidekiq_update_every
+CHART sidekiq.retry '' 'sidekiq retry jobs' jobs sidekiq sidekiq.retry stacked $((sidekiq_priority + 3)) $sidekiq_update_every
 DIMENSION retry retry absolute 1 1
 DIMENSION dead dead absolute 1 1
 
