@@ -1,7 +1,7 @@
 # sidekiq.chart.sh by codl <codl@codl.fr>
 #
 # apt install netdata-plugin-chartsd
-# put this in /usr/libexec/netdata/charts.d
+# put this in /usr/lib/netdata/charts.d
 # chown root:netdata and chmod +x
 
 sidekiq_update_every=5
