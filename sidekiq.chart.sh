@@ -1,6 +1,6 @@
 # sidekiq.chart.sh by codl <codl@codl.fr>
 #
-# apt install netdata-plugin-chartsd
+# apt install netdata-plugin-chartsd redis-tools
 # put this in /usr/lib/netdata/charts.d
 # chown root:netdata and chmod +x
 
