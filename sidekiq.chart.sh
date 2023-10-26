@@ -1,8 +1,8 @@
 # sidekiq.chart.sh by codl <codl@codl.fr>
 #
 # apt install netdata-plugin-chartsd redis-tools
-# put this in /usr/lib/netdata/charts.d
-# chown root:netdata and chmod +x
+# put this in /usr/libexec/netdata/charts.d
+# chown root:netdata /usr/libexec/netdata/charts.d/sidekiq.chart.sh && chmod +x /usr/libexec/netdata/charts.d/sidekiq.chart.sh
 
 sidekiq_update_every=5
 sidekiq_priority=9000
