@@ -35,6 +35,8 @@ DIMENSION retry retry absolute 1 1
 DIMENSION dead dead absolute 1 1
 
 EOF
+
+    return 0
 }
 
 
@@ -71,9 +73,10 @@ SET enqueued = $enqueued
 END
 BEGIN sidekiq.retry $1
 SET retry = $retry
-SET dead $dead
+SET dead = $dead
 END
 EOF
     }
 
+    return 0
 }
