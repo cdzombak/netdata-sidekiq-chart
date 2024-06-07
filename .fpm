@@ -1,0 +1,12 @@
+-t deb
+-s dir
+--name netdata-sidekiq-chart
+--description "Sidekiq chart for Netdata"
+--url "https://github.com/cdzombak/netdata-sidekiq-chart"
+--maintainer "Chris Dzombak <https://www.dzombak.com>"
+--license "LGPL-3.0"
+--depends netdata-plugin-chartsd
+--depends redis-tools
+--architecture all
+--deb-user root
+--deb-group netdata
